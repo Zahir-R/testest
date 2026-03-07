@@ -1,4 +1,5 @@
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+import { useRouter } from 'vue-router' 
 
 export const useAuth = () => {
   const token = useState<string | null>('auth_token', () => {

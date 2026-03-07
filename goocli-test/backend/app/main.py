@@ -1,11 +1,16 @@
+from dotenv import load_dotenv
+
+# Load environment variables first
+load_dotenv()
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.database import engine
-from app.models import models
-from app.routers import auth, chat
+from .database import engine
+from .models.models import Base
+from .routers import auth, chat
 
 # Create DB tables
-models.Base.metadata.create_all(bind=engine)
+Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Menopause Support API")
 
