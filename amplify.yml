@@ -9,6 +9,6 @@ frontend:
       commands:
         - npm run generate
   artifacts:
-    baseDirectory: goocli-test/frontend/.amplify-hosting
+    baseDirectory: goocli-test/frontend/.output/public
     files:
       - '**/*'
