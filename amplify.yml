@@ -3,6 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
+        - rm -rf goocli-test/frontend/node_modules
         - cd goocli-test/frontend
         - npm install
     build:
