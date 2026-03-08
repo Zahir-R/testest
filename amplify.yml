@@ -4,14 +4,14 @@ frontend:
     preBuild:
       commands:
         - cd goocli-test/frontend
-        - npm install
+        - npm ci
     build:
       commands:
-        - npm run generate
+        - npm run build
   artifacts:
     baseDirectory: goocli-test/frontend/.output/public
     files:
       - '**/*'
   cache:
     paths:
-      - goocli-test/frontend/node_modules/**/*
+      - node_modules/**/*
