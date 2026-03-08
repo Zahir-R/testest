@@ -3,7 +3,6 @@ frontend:
   phases:
     preBuild:
       commands:
-        - cd goocli-test/frontend
         - npm ci
     build:
       commands:
